@@ -27,7 +27,7 @@ layout: post
         <td>{{ page.group }}</td>
     </tr>
     <tr>
-        <td><strong>Data Sources</strong></td>
+        <td><strong>Data Sources</strong></td>ls
         <td>{{ page.data_sources }}</td>
     </tr>
     <tr>
@@ -37,20 +37,14 @@ layout: post
 
     <tr>
         <td><strong>Primary Care Code Lists</strong></td>
-        {% assign primary_care_code_list = page.primary_care_code_lists | split: ", " %}
-        <td>{% for code_list in primary_care_code_list %}
-            <a href="{{ code_list }}">{{ code_list | remove_first: "/primary_care/" }}</a>
-            {%- if forloop.last == false %}, {% endif -%}
-            {% endfor %}
+        <td>
+            <a href="{{ page.primary_care_code_lists }}">{{ page.primary_care_code_lists | remove_first: "/primary_care/" }}</a>           
         </td>
     </tr>
     <tr>
         <td><strong>Secondary Care Code Lists</strong></td>
-        {% assign secondary_care_code_list = page.secondary_care_code_lists | split: ", " %}
-        <td>{% for code_list in secondary_care_code_list %}
-            <a href="{{ code_list }}">{{ code_list | remove_first: "/secondary_care/" }}</a>
-            {%- if forloop.last == false %}, {% endif -%}
-            {% endfor %}
+        <td>
+            <a href="{{ page.secondary_care_code_lists }}">{{ page.secondary_care_code_lists | remove_first: "/secondary_care/" }}</a>           
         </td>
     </tr>
     <tr>
