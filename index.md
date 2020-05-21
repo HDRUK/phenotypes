@@ -19,9 +19,9 @@ We have produced the first chronological map of human health across 308 physical
 {: .table-title }
 {% assign disease_phenotypes = site.phenotypes | where: "type", "Disease or Syndrome" | sort: "phenotype_id" %}
 
-| ID | Phenotype | Data Sources | Validation |
-|----|-----------|--------------|------------|{% for phenotype in disease_phenotypes %}
-| [{{ phenotype.phenotype_id}}]({{ phenotype.url }}) | [{{ phenotype.name }}]({{ phenotype.url }}) | {{ phenotype.data_sources }} | {{ phenotype.validation }} |{% endfor %}
+| Phenotype | Data Sources | Validation |
+|-----------|--------------|------------|{% for phenotype in disease_phenotypes %}
+[{{ phenotype.name }}]({{ phenotype.url }}) | {{ phenotype.data_sources }} | {{ phenotype.validation }} |{% endfor %}
 
 [View all diseases and syndromes](/disease-or-syndrome){: .btn}
 {: .btn-p}
@@ -34,9 +34,9 @@ We have produced the first chronological map of human health across 308 physical
 ## Biomarkers
 {: .table-title }
 {% assign biomarker_phenotypes = site.phenotypes | where: "type", "Biomarker" %}
-| ID | Phenotype | Data Sources | Validation |
-|----|-----------|--------------|------------|{% for phenotype in biomarker_phenotypes %}
-| [{{ phenotype.phenotype_id}}]({{ phenotype.url }}) | [{{ phenotype.name }}]({{ phenotype.url }}) | {{ phenotype.data_sources }} | {{ phenotype.validation }} |{% endfor %}
+| Phenotype | Data Sources | Validation |
+|-----------|--------------|------------|{% for phenotype in biomarker_phenotypes %}
+| [{{ phenotype.name }}]({{ phenotype.url }}) | {{ phenotype.data_sources }} | {{ phenotype.validation }} |{% endfor %}
 
 [View all biomarkers](/biomarkers){: .btn}
 {: .btn-p}
@@ -49,9 +49,9 @@ We have produced the first chronological map of human health across 308 physical
 ## Lifestyle Risk factors
 {: .table-title }
 {% assign lifestyle_phenotypes = site.phenotypes | where: "type", "Lifestyle Risk Factor" %}
-| ID | Phenotype | Data Sources | Validation |
-|----|-----------|--------------|------------|{% for phenotype in lifestyle_phenotypes %}
-| [{{ phenotype.phenotype_id}}]({{ phenotype.url }}) | [{{ phenotype.name }}]({{ phenotype.url }}) | {{ phenotype.data_sources }} | {{ phenotype.validation }} |{% endfor %}
+| Phenotype | Data Sources | Validation |
+|-----------|--------------|------------|{% for phenotype in lifestyle_phenotypes %}
+| [{{ phenotype.name }}]({{ phenotype.url }}) | {{ phenotype.data_sources }} | {{ phenotype.validation }} |{% endfor %}
 
 [View all lifestyle risk factors](/lifestyle-risk-factors){: .btn}
 {: .btn-p}
