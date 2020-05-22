@@ -3,15 +3,17 @@ layout: home
 title: Phenotypes
 ---
 
-## Chronological map of human health
-We have produced the first chronological map of human health across 308 physical and mental health morbidities over time from birth to death.
+## Welcome to the HDR UK CALIBER Phenotype Portal
+A comprehensive, open-access resource providing the research community with information, tools and phenotyping algorithms for UK electronic health records data.
 
+Rule-based phenotyping algorithms using four national structured UK EHR data sources: primary care (CPRD), hospitalizations (HES) and mortality (ONS). Phenoypes have been extensively validated by generating six layers of evidence: aetiological, prognostic, case-note review, genetic, cross-EHR and cross-country replication.
 
+<!-- 
 - [Manuscript](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(19)30012-3/fulltext) published in the Lancet Digital Health.
 
 - [EHR phenotype definitions](https://caliberresearch.org/portal/phenotypes/chronological-map) for >300 mental/physical health conditions.
 
-- EHR phenotype definitions in [machine-readable](https://github.com/spiros/chronological-map-phenotypes) format.
+- EHR phenotype definitions in [machine-readable](https://github.com/spiros/chronological-map-phenotypes) format. -->
 
 {::options parse_block_html="true" /}
 <div>
