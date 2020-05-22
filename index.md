@@ -8,13 +8,6 @@ A comprehensive, open-access resource providing the research community with info
 
 Rule-based phenotyping algorithms using four national structured UK EHR data sources: primary care (CPRD), hospitalizations (HES) and mortality (ONS). Phenoypes have been extensively validated by generating six layers of evidence: aetiological, prognostic, case-note review, genetic, cross-EHR and cross-country replication.
 
-<!-- 
-- [Manuscript](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(19)30012-3/fulltext) published in the Lancet Digital Health.
-
-- [EHR phenotype definitions](https://caliberresearch.org/portal/phenotypes/chronological-map) for >300 mental/physical health conditions.
-
-- EHR phenotype definitions in [machine-readable](https://github.com/spiros/chronological-map-phenotypes) format. -->
-
 {::options parse_block_html="true" /}
 <div>
 ## Disease or syndrome
