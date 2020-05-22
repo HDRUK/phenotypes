@@ -2,7 +2,7 @@
 layout: phenotype
 title: PHE00325 - Ldl Cholesterol
 phenotype_id: PHE00325
-name: Ldl Cholesterol
+name: LDL Cholesterol
 type: Biomarker
 group: 
 data_sources: Primary care (CPRD), Hospital Admission Data (HES), Mortality Data (ONS)
