@@ -5,7 +5,7 @@ name: Homelessness
 phenotype_id: JqaBFwL3px7cCdDZFo4sDP 
 type: Lifestyle Risk Factor
 group: Lifestyle Risk Factor
-data_sources: Primary care (Clinical Practice Research Datalink)
+data_sources: Primary care (Clinical Practice Research Datalink GOLD)
 clinical_terminologies: Read Version 2
 validation: 
 primary_care_code_lists: /primary_care/CPRD_nanjo_homelessness_JqaBFwL3px7cCdDZFo4sDP.csv
