@@ -2,7 +2,7 @@
 layout: phenotype
 title: PHE00323 - Hdl Cholesterol
 phenotype_id: PHE00323
-name: Hdl Cholesterol
+name: HDL Cholesterol
 type: Biomarker
 group: 
 data_sources: Primary care (CPRD), Hospital Admission Data (HES), Mortality Data (ONS)
