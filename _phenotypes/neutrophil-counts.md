@@ -5,8 +5,9 @@ phenotype_id: PHE00327
 name: Neutrophil Counts
 type: Biomarker
 group: 
-data_sources: Primary care (CPRD), Hospital Admission Data (HES), Mortality Data (ONS)
-clinical_terminologies: Read, ICD-10, ICD-9, OPCS-4
+data_sources:
+    - Primary care (Clinical Practice Research Datalink GOLD)
+clinical_terminologies: Read Version 2
 validation: cross-source, casenote, aetiology, prognosis, genetic external
 primary_care_code_lists: 
 secondary_care_code_lists: 
