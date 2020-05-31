@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Lifestype Risk Factors
+title: Lifestyle Risk Factors
 ---
 
 {% assign lifestyle_phenotypes = site.phenotypes | where: "type", "Lifestyle Risk Factor" %}
