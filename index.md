@@ -31,7 +31,7 @@ Phenoypes have been extensively validated by generating six layers of evidence: 
 <div>
 ## Disease or syndrome
 {: .table-title }
-{% assign disease_phenotypes = site.phenotypes | where: "type", "Disease or Syndrome" | sort: "phenotype_id" %}
+{% assign disease_phenotypes = site.phenotypes | where: "type", "Disease or Syndrome" | sort: "name" %}
 
 | Phenotype | Data Sources |
 |-----------|--------------|{% for phenotype in disease_phenotypes %}
@@ -47,7 +47,7 @@ Phenoypes have been extensively validated by generating six layers of evidence: 
 <div>
 ## Biomarkers
 {: .table-title }
-{% assign biomarker_phenotypes = site.phenotypes | where: "type", "Biomarker" %}
+{% assign biomarker_phenotypes = site.phenotypes | where: "type", "Biomarker" | sort: "name" %}
 | Phenotype | Data Sources |
 |-----------|--------------|{% for phenotype in biomarker_phenotypes %}
 | [{{ phenotype.name }}]({{ phenotype.url }}) | {{ phenotype.data_sources | join: ", "}} |{% endfor %}
@@ -62,7 +62,7 @@ Phenoypes have been extensively validated by generating six layers of evidence: 
 <div>
 ## Lifestyle Risk factors
 {: .table-title }
-{% assign lifestyle_phenotypes = site.phenotypes | where: "type", "Lifestyle Risk Factor" %}
+{% assign lifestyle_phenotypes = site.phenotypes | where: "type", "Lifestyle Risk Factor" | sort: "name" %}
 | Phenotype | Data Sources |
 |-----------|--------------|{% for phenotype in lifestyle_phenotypes %}
 | [{{ phenotype.name }}]({{ phenotype.url }}) | {{ phenotype.data_sources | join: ", "}} |{% endfor %}
