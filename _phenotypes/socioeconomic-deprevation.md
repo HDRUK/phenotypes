@@ -1,13 +1,14 @@
 ---
 layout: phenotype
-title: PHE00334 - Socioeconomic Deprevation
-phenotype_id: PHE00334
+title: Socioeconomic Deprevation
+phenotype_id: LndXYRN4dmmhTiZMRkRpqL
 name: Socioeconomic Deprevation
 type: Lifestyle Risk Factor
 group: 
-data_sources: Primary care (CPRD), Hospital Admission Data (HES), Mortality Data (ONS)
-clinical_terminologies: Read, ICD-10, ICD-9, OPCS-4
-validation: cross-source, casenote, aetiology, prognosis, genetic external
+data_sources:
+    - Office of National Statistics (ONS)
+clinical_terminologies:
+validation: prognosis
 primary_care_code_lists: 
 secondary_care_code_lists: 
 valid_event_data_range: 01/01/1999 - 01/07/2016
@@ -21,27 +22,7 @@ version: Revision 2
 
 ### Primary Care
 
-In the Clinical Practice Research Datalink (CPRD, primary care data) we ascertained {{ page.name }} cases by searching for Read terms related to an {{ page.name }} diagnosis or evidence of endovascular/transluminal procedures related to the emergency repair of an aneurysmal segment of the aorta.
+The level of socioeconomic deprivation was measured with the index of multiple deprivation (IMD) 2007 calculated at lower layer super output area level (small geographical areas, 23 482 defined in England with an average population of 1500 people), that had been linked by a third trust party using the patient postcode of residence recorded in CPRD. This measure of community socioeconomic status is a composite indicator commonly used in the United Kingdom that has been created by the Office of National Statistics using census postcode data. It is calculated combining 38 indicators of seven domains of deprivation: income, employment, health and disability; education, skills and training; barriers to housing and services, crime, and living environment. The IMD is the combined sum of the weighted, exponentially transformed domain ranks of the domain score. Explicit pre-defined weights are used (22.5% income, 22.5% employment, 13.5% health and disability, 13.5% education, skills and training, 9.3% barriers to housing and services, 9.3% crime, and 9.3% living environment). Because IMD is a non-linear measure of community socioeconomic status, for the analysis patients were categorised into quintiles of small-area deprivation, where the first quintile indicated the least deprived and the fifth quintile the most deprived group. 
 
 
-Read terms are hierarhically organized in top-level chapters i.e. chapter G....00 is related to Circulatory System Diseases and sub-headings i.e. heading G2...00 is related to Hypertensive Heart Disease while G3...00 is related to Ischaemic Heart Disease.
-
-### Secondary Care
-
-In Hospital Episode Statistics (HES, hospital admission data) we used ICD-10 terms (see below) for {{ page.name }} diagnosis when marked as the primary diagnosis i.e. the main condition treated or investigated during the relevant episode of healthcare. We used the date of admission to hospital as the date of the event. We additionally searched for OPCS-4 terms indicating the emergency repair of an aneurysmal segment of the aorta.
-
-
-### Death
-
-### Implementation
-
-**Combining evidence across sources to define and date phenotypes**
-
-<pre>
-
-</pre>
-
-### Validations
-
-### Publications
 
