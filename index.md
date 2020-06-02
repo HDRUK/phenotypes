@@ -35,7 +35,7 @@ Phenoypes have been extensively validated by generating six layers of evidence: 
 
 | Phenotype | Data Sources |
 |-----------|--------------|{% for phenotype in disease_phenotypes %}
-[{{ phenotype.name }}]({{ phenotype.url }}) | {{ phenotype.data_sources }} |{% endfor %}
+[{{ phenotype.name }}]({{ phenotype.url }}) | {{ phenotype.data_sources | join: ", "}} |{% endfor %}
 
 [View all diseases and syndromes](/disease-or-syndrome){: .btn}
 {: .btn-p}
@@ -50,7 +50,7 @@ Phenoypes have been extensively validated by generating six layers of evidence: 
 {% assign biomarker_phenotypes = site.phenotypes | where: "type", "Biomarker" %}
 | Phenotype | Data Sources |
 |-----------|--------------|{% for phenotype in biomarker_phenotypes %}
-| [{{ phenotype.name }}]({{ phenotype.url }}) | {{ phenotype.data_sources }} |{% endfor %}
+| [{{ phenotype.name }}]({{ phenotype.url }}) | {{ phenotype.data_sources | join: ", "}} |{% endfor %}
 
 [View all biomarkers](/biomarkers){: .btn}
 {: .btn-p}
@@ -65,7 +65,7 @@ Phenoypes have been extensively validated by generating six layers of evidence: 
 {% assign lifestyle_phenotypes = site.phenotypes | where: "type", "Lifestyle Risk Factor" %}
 | Phenotype | Data Sources |
 |-----------|--------------|{% for phenotype in lifestyle_phenotypes %}
-| [{{ phenotype.name }}]({{ phenotype.url }}) | {{ phenotype.data_sources }} |{% endfor %}
+| [{{ phenotype.name }}]({{ phenotype.url }}) | {{ phenotype.data_sources | join: ", "}} |{% endfor %}
 
 [View all lifestyle risk factors](/lifestyle-risk-factors){: .btn}
 {: .btn-p}

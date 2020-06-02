@@ -7,4 +7,4 @@ title: Disease or syndrome
 
 | Phenotype | Data Sources | Validation |
 |-----------|--------------|------------|{% for phenotype in disease_phenotypes %}
-| [{{ phenotype.name }}]({{ phenotype.url }}) | {{ phenotype.data_sources }} | {{ phenotype.validation }} |{% endfor %}
+| [{{ phenotype.name }}]({{ phenotype.url }}) | {{ phenotype.data_sources | join: ", "}} | {{ phenotype.validation }} |{% endfor %}
