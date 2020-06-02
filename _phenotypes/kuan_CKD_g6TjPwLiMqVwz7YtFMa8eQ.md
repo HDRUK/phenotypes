@@ -5,14 +5,35 @@ name: Chronic Kidney Disease
 phenotype_id: g6TjPwLiMqVwz7YtFMa8eQ 
 type: Disease or Syndrome
 group: Genitourinary
-data_sources:  
-clinical_terminologies:  
-validation: cross-source
-primary_care_code_lists: /primary_care/CPRD_acne.csv
-secondary_care_code_lists: /secondary_care/ICD_acne.csv
+data_sources: 
+clinical_terminologies: 
+validation: 
+    - cross-source
+codelists: 
 valid_event_data_range: 01/01/1999 - 01/07/2016
-sex: Female/Male
-author: Kuan V., Denaxas S., Gonzalez-Izquierdo A. et al.
+sex: 
+    - Female
+    - Male
+author: 
+    - Kuan V
+    - Denaxas S
+    - Gonzalez-Izquierdo A
+    - Direk K
+    - Bhatti O
+    - Husain S
+    - Sutaria S
+    - Hingorani M
+    - Nitsch D
+    - Parisinos C
+    - Lumbers T
+    - Mathur R
+    - Sofat R
+    - Casas JP
+    - Wong I
+    - Hemingway H
+    - Hingorani A
+publications: 
+    - 'Kuan V., Denaxas S., Gonzalez-Izquierdo A. et al. A chronological map of 308 physical and mental health conditions from 4 million individuals in the National Health Service. The Lancet Digital Health - DOI: 10.1016/S2589-7500(19)30012-3' 
 status: FINAL
 date: 2019-05-20
 modified_date: 2019-05-20
