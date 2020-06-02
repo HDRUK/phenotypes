@@ -3,13 +3,21 @@ layout: home
 title: Phenotypes
 ---
 
-<!-- https://stackoverflow.com/questions/48529507/jekyll-show-post-count-for-sub-categories -->
+<!-- Count the total number of terms and the total number of phenotypes -->
+{% assign cd = 0 %}
+{% for clist in site.data.codelists %}
+        {% assign row = clist[1] %}
+        {% for r in row %}
+            {% capture cd %}{{cd | plus: 1 }}{% endcapture %}
+        {% endfor %}
+{% endfor %}
+
 {% assign size = site.phenotypes.size %}
 
 ## Welcome to the HDR UK CALIBER Phenotype Portal
 A comprehensive, open-access resource providing the research community with information, tools and phenotyping algorithms for UK electronic health records data such as:
 
-The portal contains <big>{{ size }}</big> rule-based phenotyping algorithms based on national structured UK EHR data sources: 
+The portal curates <big>{{ cd }} </big> controlled clinical terminology terms across <big>{{ size }}</big> rule-based phenotyping algorithms using national structured UK EHR data sources: 
 * __primary care__: Clinical Practice Reseach Datalink GOLD and AURUM 
 * __hospitalizations__: Hospital Episode Statistics
 * __mortality__: Office for National Statistics
