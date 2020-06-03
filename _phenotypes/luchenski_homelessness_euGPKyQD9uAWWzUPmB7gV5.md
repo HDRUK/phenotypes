@@ -7,7 +7,7 @@ type: Lifestyle Risk Factor
 group: Lifestyle Risk Factor
 data_sources: 
     - Primary care
-    - Hospital Episode Statistics
+    - Hospital Episode Statistics Admitted Patient Care
 clinical_terminologies: 
     - ICD-10
 validation: 

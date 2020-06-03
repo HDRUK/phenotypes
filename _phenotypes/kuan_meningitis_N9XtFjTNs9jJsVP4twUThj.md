@@ -6,7 +6,7 @@ phenotype_id: N9XtFjTNs9jJsVP4twUThj
 type: Disease or Syndrome
 group: Infections
 data_sources: 
-    - Hospital Episode Statistics
+    - Hospital Episode Statistics APC for CPRD GOLD
 clinical_terminologies: 
     - ICD-10
 validation: 

@@ -7,10 +7,10 @@ type: Disease or Syndrome
 group: Benign neoplasm or Carcinoma in situ
 data_sources: 
     - Clinical Practice Research Datalink GOLD
-    - Hospital Episode Statistics
+    - Hospital Episode Statistics APC for CPRD GOLD
 clinical_terminologies: 
-    - ICD-10
     - Read Version 2
+    - ICD-10
 validation: 
     - cross-source
 codelists: 
