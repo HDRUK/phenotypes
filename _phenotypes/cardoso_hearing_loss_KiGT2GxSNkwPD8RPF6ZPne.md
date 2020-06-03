@@ -7,7 +7,7 @@ type: Disease or Syndrome
 group: Disease or Syndrome
 data_sources: 
     - The Health Improvement Network (THIN)
-    - Hospital Episode Statistics
+    - Hospital Episode Statistics Admitted Patient Care
 clinical_terminologies: 
     - Read Version 2
     - ICD-10
