@@ -15,17 +15,21 @@ title: Phenotypes
 {% assign size = site.phenotypes.size %}
 
 ## Welcome to the HDR UK CALIBER Phenotype Portal
-A comprehensive, open-access resource providing the research community with information, tools and phenotyping algorithms for UK electronic health records data such as:
+A comprehensive, open-access resource providing the research community with information, tools and phenotyping algorithms for UK electronic health records:
 
-The portal curates <big>{{ cd }} </big> controlled clinical terminology terms across <big>{{ size }}</big> rule-based phenotyping algorithms using national structured UK EHR data sources: 
-* __primary care__: Clinical Practice Reseach Datalink GOLD and AURUM 
-* __hospitalizations__: Hospital Episode Statistics
-* __mortality__: Office for National Statistics
-* __research studies__: UK Biobank
+<ul>
+    <li><big>{{ size }}</big> rule-based phenotyping algorithms</li>
+    <li><big>{{ cd }} </big> controlled clinical terminology terms</li>
+    
+</ul>
+
+The portal curates rule-based phenotyping algorithms using national structured UK EHR data sources: 
+* __Primary care__: Clinical Practice Reseach Datalink GOLD and AURUM, The Health Improvement Network
+* __Hospital diagnoses and procedures__: Hospital Episode Statistics
+* __Mortality__: Office for National Statistics
+* __Research studies__: UK Biobank
 
 Phenoypes have been extensively validated by generating six layers of evidence: aetiological, prognostic, case-note review, genetic, cross-EHR and cross-country replication.
-
-
 
 {::options parse_block_html="true" /}
 <div>
