@@ -1,8 +1,8 @@
 ---
 layout: phenotype
-title: Ethinic Status
+title: Ethnic Status
 phenotype_id: PMD762GQ76BscDn5YK3Mwe
-name: Ethinic Status
+name: Ethnic Status
 type: Lifestyle Risk Factor
 group: Demographics
 data_sources:
