@@ -17,11 +17,48 @@ title: Phenotypes
 ## Welcome to the HDR UK CALIBER Phenotype Portal
 A comprehensive, open-access resource providing the research community with information, tools and phenotyping algorithms for UK electronic health records:
 
-<ul>
-    <li><big>{{ size }}</big> rule-based phenotyping algorithms</li>
-    <li><big>{{ cd }} </big> controlled clinical terminology terms</li>
-    
-</ul>
+<hr class="hr">
+
+<div class="container">
+    <div class="row mt-4">
+            <div class="col-sm-1">
+        </div>
+            <div class="col-sm-2 text-style-center">
+                <div class="text-size-xxlarge text-color-medium">
+                            {{ size }}
+                            </div>
+                <div class="text-size-small text-color-rich">
+                    phenotyping algorithms
+                </div>
+            </div>
+            <div class="col-sm-2 text-style-center">
+                <div class="text-size-xxlarge text-color-medium">
+                            {{ cd }}
+                            </div>
+                <div class="text-size-small text-color-rich">
+                    clinical terminology terms
+                </div>
+            </div>
+            <div class="col-sm-2 text-style-center">
+                <div class="text-size-xxlarge text-color-medium">
+                            10+
+                            </div>
+                <div class="text-size-small text-color-rich">
+                    data sources
+                </div>
+            </div>
+            <div class="col-sm-2 text-style-center">
+                <div class="text-size-xxlarge text-color-medium">
+                            100+
+                            </div>
+                <div class="text-size-small text-color-rich">
+                    research papers
+                </div>
+            </div>
+    </div>
+</div>
+
+<hr class="hr">
 
 The portal curates rule-based phenotyping algorithms using national structured UK EHR data sources: 
 * __Primary care__: Clinical Practice Reseach Datalink GOLD and AURUM, The Health Improvement Network

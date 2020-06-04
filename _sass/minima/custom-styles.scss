@@ -1,6 +1,56 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
 
+// Cannibalized from HDR Health Data Gateway
+.text-color-medium {
+  color: #3db28c;
+}
+
+.text-size-xxlarge {
+  font-size: 32px;
+}
+
+.col-sm-1 {
+  flex: 0 0 8.33333%;
+  max-width: 8.33333%;
+}
+
+.col-sm-2 {
+  flex: 0 0 16.66667%;
+  max-width: 16.66667%;
+}
+
+.text-style-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 1.5rem!important;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+// 
+
 h2 {
   &, h1 {
     font-size: $base-h2-size;
