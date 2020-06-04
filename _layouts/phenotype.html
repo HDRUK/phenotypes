@@ -28,28 +28,28 @@ layout: post
             {% for ds in page.data_sources %}
                 {% if ds == 'Clinical Practice Research Datalink GOLD' %}
                     {{ ds }}
-                    <button type="button" class="btn btn-outline-success">
+                    <button type="button" class="btn btn-sm">
                         <a href="https://web.www.healthdatagateway.org/dataset/756daeaa-6e47-4269-9df5-477c01cdd271">HDR Gateway</a>
                     </button>
                     <br>
 
                 {% elsif ds == 'Hospital Episode Statistics APC for CPRD GOLD' %}
                     {{ ds }}
-                    <button type="button" class="btn btn-outline-success">
+                    <button type="button" class="btn btn-sm">
                         <a href="https://web.www.healthdatagateway.org/dataset/77b5cf84-d4f2-4418-bafa-73306cf2d2b2">HDR Gateway</a>
                     </button>       
                     <br>
 
                     {% elsif ds == 'Hospital Episode Statistics Admitted Patient Care' %}
                     {{ ds }}
-                    <button type="button" class="btn btn-outline-success">
+                    <button type="button" class="btn btn-sm">
                         <a href="https://web.www.healthdatagateway.org/dataset/6111c3eb-028c-429e-a78c-6eb9e6b36b66">HDR Gateway</a>
                     </button>       
                     <br>
                     
                     {% elsif ds == 'Practice postcode linked deprivation measures for CPRD GOLD' %}
                     {{ ds }}
-                    <button type="button" class="btn btn-outline-success">
+                    <button type="button" class="btn btn-sm">
                         <a href="https://web.www.healthdatagateway.org/dataset/c6117afd-bc4d-404b-8d58-9d87db936b4c">HDR Gateway</a>
                     </button>       
                     <br>
@@ -77,19 +77,19 @@ layout: post
         <td>
             {% for codelist in page.codelists %}
                 {% if codelist contains 'Read2' %}
-                    <button type="button" class="btn btn-outline-success">
+                    <button type="button" class="btn btn-sm">
                         <a href="/codelists/{{codelist}}">Read2</a>
                     </button>                    
                 {% elsif codelist contains 'ICD10' %}
-                    <button type="button" class="btn btn-outline-success">
+                    <button type="button" class="btn btn-sm">
                         <a href="/codelists/{{codelist}}">ICD-10</a>
                     </button>                    
                 {% elsif codelist contains 'OPCS4' %}
-                    <button type="button" class="btn btn-outline-success">
+                    <button type="button" class="btn btn-sm">
                         <a href="/codelists/{{codelist}}">OPCS-4</a>
                     </button>                    
                 {% elsif codelist contains 'SNOMEDCT' %}
-                    <button type="button" class="btn btn-outline-success">
+                    <button type="button" class="btn btn-sm">
                         <a href="/codelists/{{codelist}}">SNOMED-CT UK Version</a>
                     </button>                    
                 {% endif %}          
