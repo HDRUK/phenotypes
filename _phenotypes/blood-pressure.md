@@ -1,48 +1,34 @@
 ---
 layout: phenotype
-title: PHE00320 - Blood Pressure
-phenotype_id: PHE00320
+title: Blood Pressure
+phenotype_id: FUzVABgwNAexCTqwZHPChw
 name: Blood Pressure
 type: Biomarker
-group: 
-data_sources:
-    - Primary care (Clinical Practice Research Datalink GOLD)
-clinical_terminologies: Read Version 2
-validation: cross-source, casenote, aetiology, prognosis, genetic external
-primary_care_code_lists: 
-secondary_care_code_lists: 
+group: Biomarker
+data_sources: 
+    - Clinical Practice Research Datalink GOLD
+clinical_terminologies: 
+    - Read Version 2
+validation: prognosis
+codelists:
+    - rapsomaniki_blood_pressure_FUzVABgwNAexCTqwZHPChw_Read2.csv
 valid_event_data_range: 01/01/1999 - 01/07/2016
-sex: Female/Male
+sex: 
+    - Female
+    - Male
 author: Julie George, Emily Herrett, Liam Smeeth, Harry Hemingway, Anoop Shah, Spiros Denaxas
-status: DRAFT
+status: FINAL
 date: 2012-11-23
 modified_date: 2012-11-23
-version: Revision 2
+version: 1
 ---
 
 ### Primary Care
 
-In the Clinical Practice Research Datalink (CPRD, primary care data) we ascertained {{ page.name }} cases by searching for Read terms related to an {{ page.name }} diagnosis or evidence of endovascular/transluminal procedures related to the emergency repair of an aneurysmal segment of the aorta.
-
-
-Read terms are hierarhically organized in top-level chapters i.e. chapter G....00 is related to Circulatory System Diseases and sub-headings i.e. heading G2...00 is related to Hypertensive Heart Disease while G3...00 is related to Ischaemic Heart Disease.
-
-### Secondary Care
-
-In Hospital Episode Statistics (HES, hospital admission data) we used ICD-10 terms (see below) for {{ page.name }} diagnosis when marked as the primary diagnosis i.e. the main condition treated or investigated during the relevant episode of healthcare. We used the date of admission to hospital as the date of the event. We additionally searched for OPCS-4 terms indicating the emergency repair of an aneurysmal segment of the aorta.
-
-
-### Death
+{% include csv.html csvdata=site.data.codelists.rapsomaniki_blood_pressure_FUzVABgwNAexCTqwZHPChw_Read2 %}
 
 ### Implementation
 
-**Combining evidence across sources to define and date phenotypes**
+Where multiple measurements were present in a single consultation (identified by the consid identifier) we calculated the average. We defined the range of plausible values as 20-350 mmHg for systolic measurements and 20-200 mmHg for diastolic measurements.
 
-<pre>
-
-</pre>
-
-### Validations
-
-### Publications
 
