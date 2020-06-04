@@ -88,6 +88,10 @@ layout: post
                     <button type="button" class="btn btn-outline-success">
                         <a href="/codelists/{{codelist}}">OPCS-4</a>
                     </button>                    
+                {% elsif codelist contains 'SNOMEDCT' %}
+                    <button type="button" class="btn btn-outline-success">
+                        <a href="/codelists/{{codelist}}">SNOMED-CT UK Version</a>
+                    </button>                    
                 {% endif %}          
             {% endfor %}       
         </td>
