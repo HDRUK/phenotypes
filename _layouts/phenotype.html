@@ -22,42 +22,88 @@ layout: post
     </tr>
     
     <tr>
-        <td><strong>Data Sources</strong></td>
-        <td>{{ page.data_sources }}</td>
-    </tr>
-    
-    <tr>
-        <td><strong>Clinical Terminologies</strong></td>
-        <td>{{ page.clinical_terminologies }}</td>
-    </tr>
+        <td>
+        <strong>Data Sources</strong></td>
+        <td>
+            {% for ds in page.data_sources %}
+                {% if ds == 'Clinical Practice Research Datalink GOLD' %}
+                    {{ ds }}
+                    <button type="button" class="btn btn-sm">
+                        <a href="https://web.www.healthdatagateway.org/dataset/756daeaa-6e47-4269-9df5-477c01cdd271">HDR Gateway</a>
+                    </button>
+                    <br>
 
-    <!-- <tr>
-        <td><strong>Primary Care Code Lists</strong></td>
-        <td>
-            <a href="{{ page.primary_care_code_lists }}">{{ page.primary_care_code_lists | remove_first: "/primary_care/" }}</a>           
-        </td>
-    </tr>
-    
-    <tr>
-        <td><strong>Secondary Care Code Lists</strong></td>
-        <td>
-            <a href="{{ page.secondary_care_code_lists }}">{{ page.secondary_care_code_lists | remove_first: "/secondary_care/" }}</a>           
-        </td>
-    </tr> -->
-    
-    <!-- <tr>
-        <td><strong>Death Code Lists</strong></td>
-        {% assign death_code_list = page.death_code_lists | split: ", " %}
-        <td>{% for code_list in death_code_list %}
-            <a href="{{ code_list }}">{{ code_list | remove_first: "/death/" }}</a>
-            {%- if forloop.last == false %}, {% endif -%}
+                {% elsif ds == 'Hospital Episode Statistics APC for CPRD GOLD' %}
+                    {{ ds }}
+                    <button type="button" class="btn btn-sm">
+                        <a href="https://web.www.healthdatagateway.org/dataset/77b5cf84-d4f2-4418-bafa-73306cf2d2b2">HDR Gateway</a>
+                    </button>       
+                    <br>
+
+                    {% elsif ds == 'Hospital Episode Statistics Admitted Patient Care' %}
+                    {{ ds }}
+                    <button type="button" class="btn btn-sm">
+                        <a href="https://web.www.healthdatagateway.org/dataset/6111c3eb-028c-429e-a78c-6eb9e6b36b66">HDR Gateway</a>
+                    </button>       
+                    <br>
+                    
+                    {% elsif ds == 'Practice postcode linked deprivation measures for CPRD GOLD' %}
+                    {{ ds }}
+                    <button type="button" class="btn btn-sm">
+                        <a href="https://web.www.healthdatagateway.org/dataset/c6117afd-bc4d-404b-8d58-9d87db936b4c">HDR Gateway</a>
+                    </button>       
+                    <br>
+                    
+                {% else %}
+                    {{ ds }}
+                    <br>
+                {% endif %}
+
             {% endfor %}
         </td>
-    </tr> -->
-    
+    </tr>
+
+    <tr>
+        <td><strong>Clinical Terminologies</strong></td>
+        <td>
+            {% for tr in page.clinical_terminologies %}
+            {{ tr }}<br>
+            {% endfor %}
+        </td>     
+    </tr>
+
+    <tr>
+        <td><strong>Codelists</strong></td>
+        <td>
+            {% for codelist in page.codelists %}
+                {% if codelist contains 'Read2' %}
+                    <button type="button" class="btn btn-sm">
+                        <a href="/codelists/{{codelist}}">Read2</a>
+                    </button>                    
+                {% elsif codelist contains 'ICD10' %}
+                    <button type="button" class="btn btn-sm">
+                        <a href="/codelists/{{codelist}}">ICD-10</a>
+                    </button>                    
+                {% elsif codelist contains 'OPCS4' %}
+                    <button type="button" class="btn btn-sm">
+                        <a href="/codelists/{{codelist}}">OPCS-4</a>
+                    </button>                    
+                {% elsif codelist contains 'SNOMEDCT' %}
+                    <button type="button" class="btn btn-sm">
+                        <a href="/codelists/{{codelist}}">SNOMED-CT UK Version</a>
+                    </button>                    
+                {% endif %}          
+            {% endfor %}       
+        </td>
+    </tr>
+
     <tr>
         <td><strong>Validation</strong></td>
-        <td>{{ page.validation }}</td>
+        <td>
+            {% for v in page.validation %}
+            {{ v }}<br>
+            {% endfor %}
+        </td>      
     </tr>
     
     <tr>
@@ -67,13 +113,16 @@ layout: post
     
     <tr>
         <td><strong>Sex</strong></td>
-        <td>{{ page.sex }}</td>
+        <td>
+            {% for s in page.sex %}{{ s }}<br>{% endfor %}
+        </td>
     </tr>
     
     <tr>
         <td><strong>Authors</strong></td>
-        <td>{{ page.author }}</td>
+        <td>{{ page.author | join: ", "}}</td>
     </tr>
+    
     {%- assign date_format = site.minima.date_format | default: "%-d %b %Y" -%}
     
     <tr>

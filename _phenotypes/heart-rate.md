@@ -1,48 +1,28 @@
 ---
 layout: phenotype
-title: PHE00324 - Heart Rate
-phenotype_id: PHE00324
+title: Heart Rate
+phenotype_id: 6keWsw2mW2TQjDMhNAUETt
 name: Heart Rate
 type: Biomarker
-group: 
-data_sources:
-    - Primary care (Clinical Practice Research Datalink GOLD)
-clinical_terminologies: Read Version 2
-validation: cross-source, casenote, aetiology, prognosis, genetic external
-primary_care_code_lists: 
-secondary_care_code_lists: 
+group: Biomarker
+data_sources: 
+    - Clinical Practice Research Datalink GOLD
+clinical_terminologies: 
+    - Read Version 2
+codelists:
+validation: prognosis
 valid_event_data_range: 01/01/1999 - 01/07/2016
-sex: Female/Male
-author: Julie George, Emily Herrett, Liam Smeeth, Harry Hemingway, Anoop Shah, Spiros Denaxas
-status: DRAFT
+sex: 
+    - Female
+    - Male
+author: 
+    - Archangelidi O
+status: FINAL
 date: 2012-11-23
 modified_date: 2012-11-23
-version: Revision 2
+version: Revision 1
 ---
 
 ### Primary Care
 
-In the Clinical Practice Research Datalink (CPRD, primary care data) we ascertained {{ page.name }} cases by searching for Read terms related to an {{ page.name }} diagnosis or evidence of endovascular/transluminal procedures related to the emergency repair of an aneurysmal segment of the aorta.
-
-
-Read terms are hierarhically organized in top-level chapters i.e. chapter G....00 is related to Circulatory System Diseases and sub-headings i.e. heading G2...00 is related to Hypertensive Heart Disease while G3...00 is related to Ischaemic Heart Disease.
-
-### Secondary Care
-
-In Hospital Episode Statistics (HES, hospital admission data) we used ICD-10 terms (see below) for {{ page.name }} diagnosis when marked as the primary diagnosis i.e. the main condition treated or investigated during the relevant episode of healthcare. We used the date of admission to hospital as the date of the event. We additionally searched for OPCS-4 terms indicating the emergency repair of an aneurysmal segment of the aorta.
-
-
-### Death
-
-### Implementation
-
-**Combining evidence across sources to define and date phenotypes**
-
-<pre>
-
-</pre>
-
-### Validations
-
-### Publications
-
+In the Clinical Practice Research Datalink (CPRD, primary care data) we extracted heart rate measurements using the structured data component of the additional CPRD table (entity type 131 / Pulse (CVS/BP)). Measurements were extracted from the data1 field.

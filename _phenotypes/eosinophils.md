@@ -4,45 +4,29 @@ title: PHE00322 - Eosinophils
 phenotype_id: PHE00322
 name: Eosinophils
 type: Biomarker
-group: 
-data_sources:
-    - Primary care (Clinical Practice Research Datalink GOLD)
-clinical_terminologies: Read Version 2
-validation: cross-source, casenote, aetiology, prognosis, genetic external
-primary_care_code_lists: 
-secondary_care_code_lists: 
+group: Biomarker
+data_sources: 
+    - Clinical Practice Research Datalink GOLD
+clinical_terminologies: 
+    - Read Version 2
+codelists:
+    - shah_white_blood_cells_m9LJwQVE3LVudvQ5bCu6MZ_Read2.csv
+validation: prognosis, external
 valid_event_data_range: 01/01/1999 - 01/07/2016
-sex: Female/Male
-author: Julie George, Emily Herrett, Liam Smeeth, Harry Hemingway, Anoop Shah, Spiros Denaxas
-status: DRAFT
+sex: 
+    - Female
+    - Male
+author: 
+    - Shah A
+status: FINAL
 date: 2012-11-23
 modified_date: 2012-11-23
-version: Revision 2
+version: Revision 1
 ---
 
 ### Primary Care
 
-In the Clinical Practice Research Datalink (CPRD, primary care data) we ascertained {{ page.name }} cases by searching for Read terms related to an {{ page.name }} diagnosis or evidence of endovascular/transluminal procedures related to the emergency repair of an aneurysmal segment of the aorta.
+In the Clinical Practice Research Datalink (CPRD, primary care data) we extracted eosinophil measurements using the structured data component of the test CPRD table (entity type 168) combined with a list of Read terms (see below). The value was extracted from the data2 field where the units data3 field were set as 37 [10*9/L], 153 [10*9], 17 [/L]. We filtered any values less than 50 10^9/L.
 
-
-Read terms are hierarhically organized in top-level chapters i.e. chapter G....00 is related to Circulatory System Diseases and sub-headings i.e. heading G2...00 is related to Hypertensive Heart Disease while G3...00 is related to Ischaemic Heart Disease.
-
-### Secondary Care
-
-In Hospital Episode Statistics (HES, hospital admission data) we used ICD-10 terms (see below) for {{ page.name }} diagnosis when marked as the primary diagnosis i.e. the main condition treated or investigated during the relevant episode of healthcare. We used the date of admission to hospital as the date of the event. We additionally searched for OPCS-4 terms indicating the emergency repair of an aneurysmal segment of the aorta.
-
-
-### Death
-
-### Implementation
-
-**Combining evidence across sources to define and date phenotypes**
-
-<pre>
-
-</pre>
-
-### Validations
-
-### Publications
+{% include csv.html csvdata=site.data.codelists.shah_white_blood_cells_m9LJwQVE3LVudvQ5bCu6MZ_Read2 %}
 
