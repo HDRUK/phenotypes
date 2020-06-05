@@ -1,6 +1,33 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
 
+// Overwrite site title and header size
+
+.site-title {
+  @include relative-font-size(2.2);
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  float: left;
+
+  @include media-query($on-palm) {
+    padding-right: 45px;
+  }
+
+  &,
+  &:visited {
+    color: $color-light;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.site-header {
+  line-height: 100px;
+}
+
+
 // Cannibalized from Bootstrap
 
 .btn {
