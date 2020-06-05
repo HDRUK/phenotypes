@@ -58,15 +58,23 @@ A comprehensive, open-access resource providing the research community with info
     </div>
 </div>
 
-<hr class="hr">
+<hr class="hr mt-4">
 
-The portal curates rule-based phenotyping algorithms using national structured UK EHR data sources: 
-* __Primary care__: Clinical Practice Reseach Datalink GOLD and AURUM, The Health Improvement Network
-* __Hospital diagnoses and procedures__: Hospital Episode Statistics
-* __Mortality__: Office for National Statistics
-* __Research studies__: UK Biobank
+<div class="row">
+<div class="col-sm-99 text-style-center">
+<div class="text-size-xlarge text-color-medium">What is a phenotyping algorithm?</div> 
+    <div class="text-size-small text-color-rich">
+When patients interact with physicians, or are admitted into hospital, information is collected electronically on their symptoms, diagnoses, laboratory test results, and prescriptions and stored in Electronic Health Records (EHR). EHR are a valuable resource for researchers and clinicians for improving health and healthcare. Phenotyping algorithms are complex computer programs that extract useful information from EHR so they can be used for health research.</div>
+</div>
 
-Phenoypes have been extensively validated by generating six layers of evidence: aetiological, prognostic, case-note review, genetic, cross-EHR and cross-country replication.
+<div class="col-sm-99 text-style-center">
+<div class="text-size-xlarge text-color-medium">What is the HDR UK Phenotype Portal?</div> 
+    <div class="text-size-small text-color-rich">
+The HDR UK Phenotype Portal is a a national platform for dissemination of citable algorithms (incl. validations) and tools which will reduce duplication of effort and improve research reproducibility. More information can be found on the <a href="https://www.hdruk.ac.uk/projects/national-phenomics-resource/">HDR website</a></div>
+</div>
+</div>
+
+<hr class="hr mt-4">
 
 {::options parse_block_html="true" /}
 <div>
