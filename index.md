@@ -4,9 +4,11 @@ title: Phenotypes
 ---
 
 <!-- Count the total number of terms and the total number of phenotypes -->
+{% assign n_codelists = 0 %}
 {% assign cd = 0 %}
 {% for clist in site.data.codelists %}
         {% assign row = clist[1] %}
+        {% capture n_codelists %}{{n_codelists | plus: 1 }}{% endcapture %}
         {% for r in row %}
             {% capture cd %}{{cd | plus: 1 }}{% endcapture %}
         {% endfor %}
@@ -33,10 +35,18 @@ A comprehensive, open-access resource providing the research community with info
             </div>
             <div class="col-sm-2 text-style-center">
                 <div class="text-size-xxlarge text-color-medium">
+                            {{ n_codelists }}
+                            </div>
+                <div class="text-size-small text-color-rich">
+                    codelists
+                </div>
+            </div>
+            <div class="col-sm-2 text-style-center">
+                <div class="text-size-xxlarge text-color-medium">
                             {{ cd }}
                             </div>
                 <div class="text-size-small text-color-rich">
-                    clinical terminology terms
+                    medical ontology terms
                 </div>
             </div>
             <div class="col-sm-2 text-style-center">
