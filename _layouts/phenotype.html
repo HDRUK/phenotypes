@@ -68,7 +68,12 @@ layout: post
                     <button type="button" class="btn btn-sm">
                         <a href="/codelists/{{codelist}}">SNOMED-CT UK Version</a>
                     </button>                    
-                {% endif %}          
+                {% elsif codelist contains 'BNF' %}
+                <button type="button" class="btn btn-sm">
+                    <a href="/codelists/{{codelist}}">British National Formulary</a>
+                </button>                    
+            {% endif %}          
+
             {% endfor %}       
         </td>
     </tr>
