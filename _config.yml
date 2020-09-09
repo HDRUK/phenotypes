@@ -43,7 +43,7 @@ collections:
   phenotypes:
     sort_by: phenotype_id
     output: true
-    permalink: /phenotypes/:name
+    permalink: /:name
 
 algolia:
   application_id: 'O61CFTQFTF'
