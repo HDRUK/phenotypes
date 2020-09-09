@@ -54,23 +54,23 @@ layout: post
             {% for codelist in page.codelists %}
                 {% if codelist contains 'Read2' %}
                     <button type="button" class="btn btn-sm">
-                        <a href="/codelists/{{codelist}}">Read2</a>
+                        <a href="{{ "/codelists" | relative_url }}/{{codelist}}">Read2</a>
                     </button>                    
                 {% elsif codelist contains 'ICD10' %}
                     <button type="button" class="btn btn-sm">
-                        <a href="/codelists/{{codelist}}">ICD-10</a>
+                        <a href="{{ "/codelists" | relative_url }}/{{codelist}}">ICD-10</a>
                     </button>                    
                 {% elsif codelist contains 'OPCS4' %}
                     <button type="button" class="btn btn-sm">
-                        <a href="/codelists/{{codelist}}">OPCS-4</a>
+                        <a href="{{ "/codelists" | relative_url }}/{{codelist}}">OPCS-4</a>
                     </button>                    
                 {% elsif codelist contains 'SNOMEDCT' %}
                     <button type="button" class="btn btn-sm">
-                        <a href="/codelists/{{codelist}}">SNOMED-CT UK Version</a>
+                        <a href="{{ "/codelists" | relative_url }}/{{codelist}}">SNOMED-CT UK Version</a>
                     </button>                    
                 {% elsif codelist contains 'BNF' %}
                 <button type="button" class="btn btn-sm">
-                    <a href="/codelists/{{codelist}}">British National Formulary</a>
+                    <a href="{{ "/codelists" | relative_url }}/{{codelist}}">British National Formulary</a>
                 </button>                    
             {% endif %}          
 
