@@ -169,11 +169,10 @@ def export_catalogue(phenotypes):
 
 def main():
     phenotypes = get_phenotypes()
-    # pprint(phenotypes[0])
     export_catalogue(phenotypes)
-    # export_graph(phenotypes)
-    # export_phenotype2datasets(phenotypes)
-    # export_dataset2phenotypes(phenotypes)
+    export_graph(phenotypes)
+    export_phenotype2datasets(phenotypes)
+    export_dataset2phenotypes(phenotypes)
 
 if __name__ == "__main__":
     main()
