@@ -6,10 +6,18 @@ __email__ = "susheel.varma@hdruk.ac.uk"
 __license__ = "Apache 2"
 
 import os
-import markdown
+import csv
 import json
+import markdown
 from slugify import slugify
 from pprint import pprint
+
+
+def write_csv(filename, data, fieldnames=None):
+    with open(filename, 'w') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(data)
 
 def get_phenotype_files(dir):
     phenotype_files = []
@@ -33,6 +41,9 @@ def get_phenotype(file):
         html = md.convert(text)
         
         meta = md.Meta
+        codelists = meta.get('codelists', [''])
+        codelists = [c.replace('- ', '') for c in codelists[1:]]
+        # data_sources = meta.get('data_sources', [])
         toc = ["Metadata"]
         toc.extend([t['name'] for t in md.toc_tokens])
         data_sources = []
@@ -46,6 +57,8 @@ def get_phenotype(file):
         'name': meta['name'][0],
         'type': meta['type'][0],
         'id': meta['phenotype_id'][0],
+        'data_sources': data_sources,
+        'codelists': codelists,
         'filename': filename,
         'url': url,
         'toc': toc,
@@ -127,11 +140,40 @@ def export_graph(phenotypes, filename="_data/graph.json"):
         graph_json.write(json.dumps(graph, indent=2))
     return graph
 
+def export_catalogue(phenotypes):
+    DATA = []
+    for p in phenotypes:
+        data_sources = [ds['name'] for ds in p['data_sources'] if type(ds) is dict]
+        row = {
+            'phenotype': p['name'],
+            'phenotype_id': p['id'],
+            'primary_care': [],
+            'secondary_care': [],
+        }
+        if len(data_sources):
+            row['data_sources'] = "; ".join(data_sources)
+        for c in p['codelists']:
+            if "read" in c.lower():
+                row['primary_care'].append(c)
+            elif "icd" in c.lower():
+                row['secondary_care'].append(c)
+            elif "snomed" in c.lower():
+                row['secondary_care'].append(c)
+            elif "opcs" in c.lower():
+                row['secondary_care'].append(c)
+        if len(row['primary_care']): row['primary_care'] = "; ".join(row['primary_care'])
+        if len(row['secondary_care']): row['secondary_care'] = "; ".join(row['secondary_care'])
+        DATA.append(row)
+    headers = ['phenotype', 'phenotype_id', 'data_sources', "primary_care", 'secondary_care']
+    write_csv("_data/phenotypes.csv", DATA, fieldnames=headers)
+
 def main():
     phenotypes = get_phenotypes()
-    export_graph(phenotypes)
-    export_phenotype2datasets(phenotypes)
-    export_dataset2phenotypes(phenotypes)
+    # pprint(phenotypes[0])
+    export_catalogue(phenotypes)
+    # export_graph(phenotypes)
+    # export_phenotype2datasets(phenotypes)
+    # export_dataset2phenotypes(phenotypes)
 
 if __name__ == "__main__":
     main()
